@@ -65,7 +65,20 @@ body {
     font-weight: 700;
     color: var(--text-dark);
 }
+/* Style for the new logo image */
+.logo-image {
+    height: 40px; /* Adjust this height to fit your preference */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
 
+/* Ensure the logo container stays centered vertically */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
 .nav {
     display: flex;
     gap: 2rem;
@@ -993,4 +1006,5 @@ body {
         font-size: 0.8rem;
     }
 }
+
 
