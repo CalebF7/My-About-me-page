@@ -467,7 +467,7 @@ body {
 
 .social-icon {
     width: 2.5rem;
-    height: 2.5rem;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-color: white;
     border: 1px solid var(--border-color);
@@ -825,7 +825,6 @@ body {
 
     .social-icon {
         width: 2.5rem;
-        height: 2.5rem;
         min-width: 2.5rem;
     }
 
@@ -982,7 +981,6 @@ body {
 
     .social-icon {
         width: 2rem;
-        height: 2rem;
     }
 
     .social-icon i {
@@ -993,4 +991,5 @@ body {
         font-size: 0.8rem;
     }
 }
+
 
