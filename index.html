@@ -193,7 +193,9 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" netlify id="contactForm">
+                    <form class="contact-form" name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" id="contactForm">
+                        <!-- Honeypot field for spam protection (hidden from users) -->
+                        <input type="hidden" name="bot-field" />
                         <input type="text" class="form-input" name="name" placeholder="Your name" required>
                         <input type="email" class="form-input" name="email" placeholder="name@example.com" required>
                         <textarea class="form-textarea" name="message" placeholder="Tell me what's on your mind..." rows="4" required></textarea>

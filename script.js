@@ -93,33 +93,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         // Get form data
-        const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const message = this.querySelector('textarea').value;
+        const name = this.querySelector('input[name="name"]').value;
+        const email = this.querySelector('input[name="email"]').value;
+        const message = this.querySelector('textarea[name="message"]').value;
+        const botField = this.querySelector('input[name="bot-field"]').value;
         
-        // Simple validation
+        // Check honeypot field - if filled, it's a bot
+        if (botField) {
+            e.preventDefault();
+            return false;
+        }
+        
+        // Client-side validation
         if (!name || !email || !message) {
+            e.preventDefault();
             alert('Please fill in all fields.');
-            return;
+            return false;
         }
         
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
+            e.preventDefault();
             alert('Please enter a valid email address.');
-            return;
+            return false;
         }
         
-        // Simulate form submission (replace with actual API call)
-        console.log('Form submitted:', { name, email, message });
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        
-        // Reset form
-        this.reset();
+        // If validation passes, allow Netlify to handle the submission
+        // The form will submit normally and redirect to success.html
     });
 }
 

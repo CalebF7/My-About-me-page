@@ -600,6 +600,14 @@ body {
     transition: all 0.2s;
 }
 
+/* Hide honeypot field from users (spam protection) */
+input[name="bot-field"] {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
