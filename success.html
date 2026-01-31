@@ -8,79 +8,76 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="images/My Logo 1.png">
     <style>
-        .success-container {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
-            background-color: var(--bg-light);
+            padding: 1.5rem;
         }
+        
         .success-content {
-            background-color: white;
-            border: 1px solid var(--border-color);
-            border-radius: 1rem;
-            padding: 3rem;
             text-align: center;
-            max-width: 500px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            max-width: 400px;
+            width: 100%;
         }
+        
         .success-icon {
-            width: 80px;
-            height: 80px;
-            background-color: #10b981;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
+            font-size: 3rem;
+            color: #10b981;
+            margin-bottom: 1.5rem;
         }
-        .success-icon i {
-            font-size: 2.5rem;
-            color: white;
-        }
+        
         .success-title {
-            font-size: 1.875rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
         }
+        
         .success-message {
-            font-size: 1rem;
-            color: var(--text-light);
+            font-size: 0.9375rem;
+            color: #64748b;
             margin-bottom: 2rem;
-            line-height: 1.6;
         }
+        
         .success-button {
             display: inline-block;
-            padding: 0.875rem 2rem;
-            background-color: var(--primary-blue);
+            padding: 0.75rem 1.5rem;
+            background-color: #3b82f6;
             color: white;
             text-decoration: none;
             border-radius: 0.5rem;
-            font-weight: 600;
-            transition: background-color 0.2s;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            transition: background-color 0.2s ease;
         }
+        
         .success-button:hover {
-            background-color: var(--primary-blue-dark);
+            background-color: #2563eb;
         }
     </style>
 </head>
 <body>
-    <div class="success-container">
-        <div class="success-content">
-            <div class="success-icon">
-                <i class="fas fa-check"></i>
-            </div>
-            <h1 class="success-title">Message Sent Successfully!</h1>
-            <p class="success-message">
-                Thank you for reaching out! I've received your message and will get back to you as soon as possible.
-            </p>
-            <a href="index.html" class="success-button">Return to Home</a>
-        </div>
+    <div class="success-content">
+        <div class="success-icon">✓</div>
+        <h1 class="success-title">Message Sent!</h1>
+        <p class="success-message">
+            Thank you for reaching out. I'll get back to you soon.
+        </p>
+        <a href="index.html" class="success-button">Back to Home</a>
     </div>
 </body>
 </html>

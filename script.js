@@ -94,9 +94,9 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         // Get form data
-        const name = this.querySelector('input[name="name"]').value;
-        const email = this.querySelector('input[name="email"]').value;
-        const message = this.querySelector('textarea[name="message"]').value;
+        const name = this.querySelector('input[name="name"]').value.trim();
+        const email = this.querySelector('input[name="email"]').value.trim();
+        const message = this.querySelector('textarea[name="message"]').value.trim();
         const botField = this.querySelector('input[name="bot-field"]').value;
         
         // Check honeypot field - if filled, it's a bot
@@ -120,8 +120,9 @@ if (contactForm) {
             return false;
         }
         
-        // If validation passes, allow Netlify to handle the submission
-        // The form will submit normally and redirect to success.html
+        // If validation passes, allow the form to submit normally
+        // Netlify will process it and redirect to success.html
+        // Don't prevent default - let the form submit naturally
     });
 }
 
